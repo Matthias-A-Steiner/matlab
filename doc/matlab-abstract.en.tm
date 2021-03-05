@@ -22,9 +22,9 @@
   The <name|Matlab> interface to <TeXmacs> has been written by <name|Michael
   Graffam> way back in 2004 and undergone some reorganization by J<name|oris
   van der Hoeven> in early 2013. Despite its age, it can still be run with
-  more recent version of <name|Matlab>. \ A group of enthusiast (pireddag,
+  more recent version of <name|Matlab>. A group of enthusiast (pireddag,
   jeroen, and Tilda) on <em|GNU TeXmacs forum> have worked on the necessary
-  modifications to get the plugin up and going. Time will tell if
+  modifications to get the plugin up and going. Time will tell, if
   <em|substantial> recoding is required. So, if you like the idea of using
   <name|Matlab> from within <TeXmacs>, then please help figuring out.
 

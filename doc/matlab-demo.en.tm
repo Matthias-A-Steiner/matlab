@@ -433,9 +433,9 @@
   <paragraph*|Power Computing and Plotting with <name|Matlab>>
 
   The plugin allows for the calling of functions from additional
-  <name|Matlab> toolkits. \ Coming back to the first example of our tour, we
+  <name|Matlab> toolkits. Coming back to the first example of our tour, we
   used <name|Vladimir Bondarenko>'s freely available <samp|drawLA> toolbox to
-  plot the above numerically solved vector projection.\ 
+  plot the numerically solved vector projection above.\ 
 
   <\session|matlab|default>
     <\input>
@@ -455,7 +455,7 @@
 
       drawSpan(u);\ 
 
-      hold on; \ \ \ \ \ \ 
+      hold on;\ 
 
       drawLine([u puv], 'r-.');
 
@@ -481,7 +481,7 @@
   It is a good idea to close the <name|Matlab>-app on the dashboard and
   <em|not> via the <samp|Close session> button within <TeXmacs>. This would
   shut down the <name|Matlab>-app causing an \Pabnormal termination\Q due to
-  a \Psegmentation violation\Q and clutter your \ <verbatim|HOME> directory
+  a \Psegmentation violation\Q and clutter your <verbatim|HOME> directory
   with <verbatim|matlab_crash_dump.xxxx-y>-files.\ 
 
   <tmdoc-copyright|2021|Tilda <abbr|A.> Steiner>

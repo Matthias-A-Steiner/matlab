@@ -1,11 +1,21 @@
-<TeXmacs|1.0.7.11>
+<TeXmacs|1.99.18>
 
-<style|tmdoc>
+<style|<tuple|tmdoc|old-spacing|old-dots|old-lengths>>
 
 <\body>
   <tmdoc-title|The <name|Matlab> plug-in>
 
-  <tmdoc-copyright|2011|Joris van der Hoeven>
+  <\traverse>
+    <\branch>
+      Short description
+    </branch|matlab-abstract.en.tm>
+
+    <branch|Installation|matlab-install.en.tm>
+
+    <branch|Example session|matlab-demo.en.tm>
+  </traverse>
+
+  <tmdoc-copyright|2021|Tilda <abbr|A.> Steiner>
 
   <tmdoc-license|Permission is granted to copy, distribute and/or modify this
   document under the terms of the GNU Free Documentation License, Version 1.1

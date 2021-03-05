@@ -97,7 +97,7 @@
 
       \ \ 
 
-      ?? tm_matlab.bat ?? No idea - I work on real operating systems ;-)
+      ?? tm_matlab.bat ?? Isn't there a bash shell for Windows?
 
       \;
     </code*>>
