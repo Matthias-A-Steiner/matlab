@@ -1,4 +1,4 @@
-<TeXmacs|1.99.18>
+<TeXmacs|1.99.19>
 
 <style|<tuple|tmdoc|english|old-spacing|old-dots|old-lengths>>
 
@@ -111,7 +111,7 @@
   <verbatim|startup.m>, if there is one, will be considered. <em|Now> you're
   up and running.
 
-  <tmdoc-copyright|2021|Tilda <abbr|A.> Steiner>
+  <tmdoc-copyright|2020\U2021|Darcy Shen and Tilda <abbr|A.> Steiner>
 
   <tmdoc-license|Permission is granted to copy, distribute and/or modify this
   document under the terms of the GNU Free Documentation License, Version 1.1

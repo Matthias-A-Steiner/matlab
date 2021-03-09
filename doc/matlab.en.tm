@@ -1,4 +1,4 @@
-<TeXmacs|1.99.18>
+<TeXmacs|1.99.19>
 
 <style|<tuple|tmdoc|old-spacing|old-dots|old-lengths>>
 
@@ -15,7 +15,7 @@
     <branch|Example session|matlab-demo.en.tm>
   </traverse>
 
-  <tmdoc-copyright|2021|Tilda <abbr|A.> Steiner>
+  <tmdoc-copyright|2011-2021|Joris van der Hoeven>
 
   <tmdoc-license|Permission is granted to copy, distribute and/or modify this
   document under the terms of the GNU Free Documentation License, Version 1.1
