@@ -43,9 +43,10 @@
 
   <paragraph*|Using <name|Matlab> for Linear Algebra Computations>
 
-  <name|Matlab> can be run both in single-line and multi-line input mode.
-  Below, we show how to do some linear algebra operations with <name|Matlab>,
-  like\ 
+  At the plugin prompt, <name|Matlab> commands can be inserted both in
+  single-line and multi-line input mode. The way to enter multi-line commands
+  is by pressing the <key|Shift Enter>-keys simultaneously. Below, we show
+  how to do some linear algebra operations with <name|Matlab>, like\ 
 
   <\session|matlab|default>
     <\unfolded-subsession>
@@ -75,7 +76,7 @@
   <\session|matlab|default>
     <\unfolded-subsession>
       matrix operations (display, transpose, invert a matrix, calculate its
-      det<strong|<math|\<b-A\>>>, rg<math|\<b-A\>>, and Eigenvector)
+      det<strong|<math|\<b-A\>>>, rg<math|\<b-A\>>, and eigenvectors)
     <|unfolded-subsession>
       <\session|matlab|default>
         <\input>
@@ -237,17 +238,48 @@
     </unfolded-subsession>
   </session>
 
-  Note, that some calculations require the use of <verbatim|disp(var)> to
-  have their output displayed, or <verbatim|tmdisp(var)> to have it nicely
-  formatted.
+  Note that the <samp|matlab-plugin> only displays output when it is not
+  assigned to a variable, unlike what happens in <name|Matlab>'s command
+  window, where the results of all commands that do not terminate with a
+  semicolon are displayed. The <name|Matlab> command <code*|A = [1 0 0 0; 1 1
+  0 0; 1 2 1 0; 1 3 3 1]>, for instance, assigns the matrix
+  <with|mode|math|math-display|true|>to the variable <code*|A>. As the
+  command is a variable assignment, the plugin will not display the output
+  that is contained in variable <code*|A>.<\footnote>
+    The reason being, in a nut shell, that the plugin via the display command
+    in <verbatim|tmrepl.m>, lines 11\U15, notices that <verbatim|ans> has an
+    old value (<abbr|i.<space|0.2spc>e.> the string <verbatim|texmacs>,
+    <abbr|c.<space|0.2spc>f.> line 11). Thus the plugin does not display
+    anything, even though the <name|Matlab> command <verbatim|A = [1 0 0 0; 1
+    1 0 0; 1 2 1 0; 1 3 3 1]> has been executed and the variable <verbatim|A>
+    has been defined. Yet, the result <em|is not> assigned to <verbatim|ans>.
+  </footnote> So, to force <verbatim|var>, i.e. the matrix in variable
+  <verbatim|A> , to be displayed, you will either have to use
+  <verbatim|disp(var)> or <verbatim|tmdisp(var)> to have it nicely formatted.\ 
+
+  The <name|Matlab> command <code*|A^3> performs an <strong|operation> on the
+  previously \Pdefined\Q variable <code*|A>, in this case taking the 3rd
+  power on matrix <strong|<math|\<b-A\>>>. The answer, and <strong|not> the
+  variable, will then be displayed automatically by the plugin.<\footnote>
+    The evaluated result of an operation <em|will be> assigned to <code*|ans>
+    (<abbr|c.<space|0.2spc>f. ><verbatim|tmrepl.m>, lines
+    12<space|0.2spc>f.). This is because these operations produce a new value
+    for <verbatim|ans> (<verbatim|isnewans(ans)>, <abbr|c.<space|0.2spc>f>.
+    <verbatim|tmrepl.m>, line 13<space|0.2spc>. Hence, when performing such
+    operations, no <code*|tmdisp(var)> command is needed, as the work is
+    already being done by <code*|tmdisp(ans)>, <abbr|c.<space|0.2spc>f.
+    ><verbatim|tmrepl.m>, line 14. \V Credit for this needs to go to Giovanni
+    Piredda, who meticulously pointed out the workings of <verbatim|tmrepl.m>
+    to me in much more detail.
+  </footnote>
 
   <paragraph*|<name|Matlab> as a Plotting Engine>
 
-  In this section we give some 2d and 3d specimen of <name|Matlab>'s plotting
-  features. Using a <verbatim|startup.m> file is not mandatory, but it helps,
-  among others, to ensure consistency among the figures. So, some formatting
-  instructions have been outsourced to a <verbatim|startup.m> file, that is
-  read-in on starting a <name|Matlab>-session:
+  In this section we give some 2d and 3d specimens of <name|Matlab>'s
+  plotting features. Using a <verbatim|startup.m> file is not mandatory, but
+  it helps, among others, to ensure consistency among the figures. So, some
+  formatting instructions have been outsourced to a <verbatim|startup.m>
+  file, that is read-in on starting a <name|Matlab>-session:
 
   <\shell-code>
     <code|<\code*>
@@ -439,7 +471,7 @@
   <name|Matlab> toolkits. Coming back to the first example of our tour, we
   have used <name|Vladimir Bondarenko>'s freely available <samp|drawLA>
   toolbox (<slink|https://de.mathworks.com/matlabcentral/fileexchange/23608-drawla-draw-toolbox-for-linear-algebra>)
-  to plot the numerically solved vector projection above.\ 
+  to plot the vector projection calculated above.\ 
 
   <\session|matlab|default>
     <\input>
